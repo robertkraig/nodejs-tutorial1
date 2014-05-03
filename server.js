@@ -5,7 +5,7 @@ var ee = new events.EventEmitter();
 var handlebars = require('handlebars');
 var fs = require('fs');
 
-server = http.createServer();
+var server = http.createServer();
 
 function render(filename, req, res, model)
 {
