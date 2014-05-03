@@ -4,5 +4,6 @@
 #myelement .test {
   width: 200px;
   height: 200px;
-  background-color: #ff0000;
+  background-color: #ff9999;
+  padding: 4px;
 }
