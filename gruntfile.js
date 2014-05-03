@@ -1,11 +1,22 @@
 module.exports = function(grunt)
 {
-	grunt.initCOnfig({
-		pkg: grunt.file.readJSON('package.json')
+	grunt.initConfig({
+		pkg: grunt.file.readJSON('package.json'),
 		less:{
-			files:{
-				'site.css':"less/site.less"
+			compile:{
+				files:{
+					"site.css":"less/site.less"
+				}				
 			}
+		},
+		watch:{
+			files: ['less/site.less'],
+			tasks: ['less']
 		}
 	});
+
+	grunt.loadNpmTasks('grunt-contrib-less');
+
+	grunt.registerTask('default',['less']);
+
 };
